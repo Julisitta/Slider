@@ -1,0 +1,218 @@
+body {
+  position: relative;
+  top: 0;
+  right: 0;
+  left: 0.5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  display: block;
+  content: "12345";
+  text-align: center;
+  text-align: center;
+}
+
+body div {
+  text-decoration: none;
+}
+
+h1 {
+  color: white;
+}
+
+h2 {
+  color: white;
+}
+
+h3 {
+  color: white;
+}
+
+h4 {
+  color: white;
+}
+
+h4 {
+  color: white;
+}
+
+.slides {
+  height: 100vh;
+  position: relative;
+  padding: 0px;
+  margin: 0px;
+  list-style-type: none;
+}
+
+.slide {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 1;
+  -webkit-transition: opacity 1s;
+  -o-transition: opacity 1s;
+  transition: opacity 1s;
+}
+
+.active {
+  opacity: 1;
+  z-index: 2;
+}
+
+/*
+non-essential styles:
+just for appearance; change whatever you want
+*/
+.slide {
+  font-size: 40px;
+  padding: 40px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #333;
+  color: #fff;
+}
+
+.slide:nth-of-type(1) {
+  background: red;
+  background-image: url("../img/1.jpg");
+  background-size: cover;
+}
+
+.slide:nth-of-type(2) {
+  background: orange;
+  background-image: url("../img/2.jpg");
+  background-size: cover;
+}
+
+.slide:nth-of-type(3) {
+  background: green;
+  background-image: url("../img/3.jpg");
+  background-size: cover;
+}
+
+.slide:nth-of-type(4) {
+  background: blue;
+  background-image: url("../img/4.jpg");
+  background-size: cover;
+}
+
+.slide:nth-of-type(5) {
+  background: purple;
+  background-image: url("../img/5.jpg");
+  background-size: cover;
+}
+
+.indicators .active {
+  background-color: red;
+}
+
+.control,
+.indicator {
+  display: inline-block;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 30px;
+  width: 80px;
+  margin: 10px;
+}
+
+.indicator {
+  border: 2px solid #777777;
+}
+
+.indicators {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+@media (min-width: 601px) {
+  body a {
+    text-decoration: none;
+  }
+  body a:hover, body a:focus {
+    color: yellow;
+  }
+  h1 {
+    color: green;
+  }
+  h2 {
+    color: green;
+  }
+  h4 {
+    color: green;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 800px) {
+  h4 {
+    color: green;
+  }
+}
+
+@media (min-width: 701px) {
+  h3:hover, h3:focus {
+    color: yellow;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 900px) {
+  h4 {
+    color: red;
+  }
+}
+
+@media (min-width: 901px) {
+  body:hover, body:focus {
+    color: yellow;
+  }
+  h1:hover, h1:focus {
+    color: yellow;
+  }
+  h3 {
+    color: green;
+  }
+}
+
+@media (max-width: 900px) {
+  body div {
+    text-decoration: underline;
+  }
+  body div:hover, body div:focus {
+    color: yellow;
+  }
+}
+
+@media (max-width: 800px) {
+  h4 {
+    color: red;
+  }
+}
+
+@media (max-width: 700px) {
+  h3 {
+    color: red;
+  }
+}
+
+@media (max-width: 600px) {
+  body a {
+    text-decoration: underline;
+  }
+  body a:hover, body a:focus {
+    color: yellow;
+  }
+  h1 {
+    color: red;
+  }
+  h2 {
+    color: red;
+  }
+}
