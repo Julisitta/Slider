@@ -8,7 +8,7 @@
     list-style-type: none;
 }
 
-.slide {
+.slides__item {
     position: absolute;
     left: 0px;
     top: 0px;
@@ -17,6 +17,11 @@
     opacity: 0;
     z-index: 1;
     transition: opacity 1s;
+    font-size: 40px;
+    padding: 40px;
+    box-sizing: border-box;
+    background: #333;
+    color: #fff;
 }
 
 .active {
@@ -24,79 +29,84 @@
     z-index: 2;
 }
 
-/*
-non-essential styles:
-just for appearance; change whatever you want
-*/
-
-.slide {
-    font-size: 40px;
-    padding: 40px;
-    box-sizing: border-box;
-    background: #333;
-    color: #fff;
-
-}
-
-.slide:nth-of-type(1) {
+.slides__item:nth-of-type(1) {
     background: red;
     background-image: url("../img/1.jpg");
     background-size: cover;
    
 }
 
-.slide:nth-of-type(2) {
+.slides__item:nth-of-type(2) {
     background: orange;
     background-image: url("../img/2.jpg");
     background-size: cover;
    
 }
 
-.slide:nth-of-type(3) {
+.slides__item:nth-of-type(3) {
     background: green;
     background-image: url("../img/3.jpg");
     background-size: cover;
 }
 
-.slide:nth-of-type(4) {
+.slides__item:nth-of-type(4) {
     background: blue;
     background-image: url("../img/4.jpg");
     background-size: cover;
 }
 
-.slide:nth-of-type(5) {
+.slides__item:nth-of-type(5) {
     background: purple;
     background-image: url("../img/5.jpg");
     background-size: cover;
 }
 
-// .indicators,
-// .controls {
-//     display: none;
-// }
+
 
 .indicators .active {
     background-color: red;
 }
 
-.control,
-.indicator {
-    display: inline-block;
-    align-items: center;
-    justify-content: center;
-    height: 30px;
-    width: 80px;
-    margin: 10px;
-    
-}
-
-.indicator {
-    border: 2px solid #777777;
-}
-
 .indicators {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
     list-style: none;
     padding: 0;
     margin:0;
 }
 
+
+.indicators__item {
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    height: 15px;
+    width: 15px;
+    margin: 10px;
+    border: 2px solid #ff2e2e;
+    border-radius: 50%;
+    
+}
+
+.controls__item-pause {
+    position: absolute;
+    top: 80%;
+    z-index: 2;
+}
+
+.controls__item-next {
+    position: absolute;
+    top: 50%;
+    left: 90%;
+    z-index: 2;
+}
+
+.controls__item-prev {
+    position: absolute;
+    top: 50%;
+    right: 90%;
+    z-index: 2;
+}

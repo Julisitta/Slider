@@ -44,7 +44,7 @@ h4 {
   list-style-type: none;
 }
 
-.slide {
+.slides__item {
   position: absolute;
   left: 0px;
   top: 0px;
@@ -55,18 +55,6 @@ h4 {
   -webkit-transition: opacity 1s;
   -o-transition: opacity 1s;
   transition: opacity 1s;
-}
-
-.active {
-  opacity: 1;
-  z-index: 2;
-}
-
-/*
-non-essential styles:
-just for appearance; change whatever you want
-*/
-.slide {
   font-size: 40px;
   padding: 40px;
   -webkit-box-sizing: border-box;
@@ -75,31 +63,36 @@ just for appearance; change whatever you want
   color: #fff;
 }
 
-.slide:nth-of-type(1) {
+.active {
+  opacity: 1;
+  z-index: 2;
+}
+
+.slides__item:nth-of-type(1) {
   background: red;
   background-image: url("../img/1.jpg");
   background-size: cover;
 }
 
-.slide:nth-of-type(2) {
+.slides__item:nth-of-type(2) {
   background: orange;
   background-image: url("../img/2.jpg");
   background-size: cover;
 }
 
-.slide:nth-of-type(3) {
+.slides__item:nth-of-type(3) {
   background: green;
   background-image: url("../img/3.jpg");
   background-size: cover;
 }
 
-.slide:nth-of-type(4) {
+.slides__item:nth-of-type(4) {
   background: blue;
   background-image: url("../img/4.jpg");
   background-size: cover;
 }
 
-.slide:nth-of-type(5) {
+.slides__item:nth-of-type(5) {
   background: purple;
   background-image: url("../img/5.jpg");
   background-size: cover;
@@ -109,8 +102,20 @@ just for appearance; change whatever you want
   background-color: red;
 }
 
-.control,
-.indicator {
+.indicators {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 2;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.indicators__item {
   display: inline-block;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -118,19 +123,31 @@ just for appearance; change whatever you want
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 30px;
-  width: 80px;
+  height: 15px;
+  width: 15px;
   margin: 10px;
+  border: 2px solid #ff2e2e;
+  border-radius: 50%;
 }
 
-.indicator {
-  border: 2px solid #777777;
+.controls__item-pause {
+  position: absolute;
+  top: 80%;
+  z-index: 2;
 }
 
-.indicators {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.controls__item-next {
+  position: absolute;
+  top: 50%;
+  left: 90%;
+  z-index: 2;
+}
+
+.controls__item-prev {
+  position: absolute;
+  top: 50%;
+  right: 90%;
+  z-index: 2;
 }
 
 @media (min-width: 601px) {
